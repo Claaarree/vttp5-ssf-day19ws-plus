@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div th:object="${product}">
+        <p>Id: <span th:utext="${product.id}"></span></p>
+        <p>description: <span th:utext="${product.description}"></span></p>
+        <p>discountPercentage: <span th:utext="${product.discountPercentage}"></span></p>
+        <p>rating: <span th:utext="${product.rating}"></span></p>
+        <p>stock: <span th:utext="${product.stock}"></span></p>
+        <p>brand: <span th:utext="${product.brand}"></span></p>
+        <p>dated: <span th:utext="${#dates.format(product.dated, 'yyyy/MM/dd')}"></span></p>
+        <p>buy: <span th:utext="${product.buy}"></span></p>     
+    </div>
+    <a th:href="@{/products/all}">Back to products listing!</a>
+</head>
+<body>
+    
+</body>
+</html>
